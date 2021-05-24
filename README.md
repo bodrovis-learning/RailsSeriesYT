@@ -1,24 +1,7 @@
-# README
+# Серия уроков по Ruby on Rails на YouTube
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Плейлист на YouTube.
 
-Things you may want to cover:
+Каждая ветвь содержит код для отдельного урока.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+(c) [Ilya Bodrov-Krukowski](http://bodrovis.tech)
