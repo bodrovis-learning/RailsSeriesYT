@@ -1,0 +1,13 @@
+<%= form_with model: @question do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title, required: true, minlength: 2, placeholder: 'Title' %>
+  </div>
+
+  <div>
+    <%= f.label :body %>
+    <%= f.text_area :body, required: true, minlength: 2 %>
+  </div>
+
+  <%= f.submit "Submit question!" %>
+<% end %>
