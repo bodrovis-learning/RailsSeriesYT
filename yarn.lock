@@ -894,21 +894,21 @@
     rimraf "^3.0.2"
 
 "@rails/actioncable@^6.0.0":
-  version "6.0.4"
-  resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-6.0.4.tgz#d533c3d9176ed7763145162dec4f460a9d6fb550"
-  integrity sha512-dTirb2EMt/YPVkEZp3GSXwjR+dYjbK0b0NtupEiuwj5dsffFfRnvtPK/aqLibZH6J3G8EAHnuoAaTF0neq2ggw==
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-6.1.4.tgz#c3c5a9f8302c429af9722b6c50ab48049016d2a3"
+  integrity sha512-0LmSKJTuo2dL6BQ+9xxLnS9lbkyfz2mBGeBnQ2J7o9Bn0l0q+ZC6VuoZMZZXPvABI4QT7Nfknv5WhfKYL+boew==
 
 "@rails/activestorage@^6.0.0":
-  version "6.0.4"
-  resolved "https://registry.yarnpkg.com/@rails/activestorage/-/activestorage-6.0.4.tgz#0b8827f7c11bc5da48fcae856e65f86bced36289"
-  integrity sha512-hMhIMZzNQJ7MulJzH555PxCYhCsVI+OUMgKBNHeIX88DsTQSBjIyn5kAAIXs4ERlmOUKeYFadU9MBZ86J3ULUg==
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@rails/activestorage/-/activestorage-6.1.4.tgz#7772f539cc846df5f4364fc57ccb48860f9e966e"
+  integrity sha512-1Tm8uaVBhLTDEG4YaFPvqguhjbUGSPVItm0CfkRpIFZIkybWzFAxatIrk4YVOOxB8ZdXS7GdeYa1qVwjdiDkgQ==
   dependencies:
     spark-md5 "^3.0.0"
 
 "@rails/ujs@^6.0.0":
-  version "6.0.4"
-  resolved "https://registry.yarnpkg.com/@rails/ujs/-/ujs-6.0.4.tgz#b155b0e23b766fe8038cb9bc796efb55ea840c15"
-  integrity sha512-pi6BTIAuMAgfh0tz9jHyKwuzT8HKWlZdfI6/pxcR+NWRuTyN9psYmxskP2QnxFehSkSuvQmQuKv3Hyrs13l3xQ==
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/@rails/ujs/-/ujs-6.1.4.tgz#093d5341595a02089ed309dec40f3c37da7b1b10"
+  integrity sha512-O3lEzL5DYbxppMdsFSw36e4BHIlfz/xusynwXGv3l2lhSlvah41qviRpsoAlKXxl37nZAqK+UUF5cnGGK45Mfw==
 
 "@rails/webpacker@5.4.0":
   version "5.4.0"
@@ -973,9 +973,9 @@
   integrity sha512-1z8k4wzFnNjVK/tlxvrWuK5WMt6mydWWP7+zvH5eFep4oj+UkrfiJTRtjCeBXNpwaA/FYqqtb4/QS4ianFpIRA==
 
 "@types/node@*":
-  version "15.12.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.12.4.tgz#e1cf817d70a1e118e81922c4ff6683ce9d422e26"
-  integrity sha512-zrNj1+yqYF4WskCMOHwN+w9iuD12+dGm0rQ35HLl9/Ouuq52cEtd0CH9qMgrdNmi5ejC1/V7vKEXYubB+65DkA==
+  version "15.12.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.12.5.tgz#9a78318a45d75c9523d2396131bd3cca54b2d185"
+  integrity sha512-se3yX7UHv5Bscf8f1ERKvQOD6sTyycH3hdaoozvaLxgUiY5lIGEeH37AD0G0Qi9kPqihPn0HOfd2yaIEN9VwEg==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -1492,9 +1492,9 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
 bootstrap@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.0.1.tgz#e7939d599119dc818a90478a2a299bdaff037e09"
-  integrity sha512-Fl79+wsLOZKoiU345KeEaWD0ik8WKRI5zm0YSPj2oF1Qr+BO7z0fco6GbUtqjoG1h4VI89PeKJnMsMMVQdKKTw==
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.0.2.tgz#aff23d5e0e03c31255ad437530ee6556e78e728e"
+  integrity sha512-1Ge963tyEQWJJ+8qtXFU6wgmAVj9gweEjibUdbmcCEYsn38tVwRk8107rk2vzt6cfQcRr3SlZ8aQBqaD8aqf+Q==
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -1750,9 +1750,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001219:
-  version "1.0.30001239"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001239.tgz#66e8669985bb2cb84ccb10f68c25ce6dd3e4d2b8"
-  integrity sha512-cyBkXJDMeI4wthy8xJ2FvDU6+0dtcZSJW3voUF8+e9f1bBeuvyZfc3PNbkOETyhbR+dGCPzn9E7MA3iwzusOhQ==
+  version "1.0.30001241"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001241.tgz#cd3fae47eb3d7691692b406568d7a3e5b23c7598"
+  integrity sha512-1uoSZ1Pq1VpH0WerIMqwptXHNNGfdl7d1cJUFs80CwQ/lVzdhTvsFZCeNFslze7AjsQnb4C85tzclPa1VShbeQ==
 
 case-sensitive-paths-webpack-plugin@^2.4.0:
   version "2.4.0"
@@ -2027,17 +2027,17 @@ copy-descriptor@^0.1.0:
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
 
 core-js-compat@^3.14.0, core-js-compat@^3.15.0:
-  version "3.15.0"
-  resolved "https://registry.yarnpkg.com/core-js-compat/-/core-js-compat-3.15.0.tgz#e14a371123db9d1c5b41206d3f420643d238b8fa"
-  integrity sha512-8X6lWsG+s7IfOKzV93a7fRYfWRZobOfjw5V5rrq43Vh/W+V6qYxl7Akalsvgab4PFT/4L/pjQbdBUEM36NXKrw==
+  version "3.15.2"
+  resolved "https://registry.yarnpkg.com/core-js-compat/-/core-js-compat-3.15.2.tgz#47272fbb479880de14b4e6081f71f3492f5bd3cb"
+  integrity sha512-Wp+BJVvwopjI+A1EFqm2dwUmWYXrvucmtIB2LgXn/Rb+gWPKYxtmb4GKHGKG/KGF1eK9jfjzT38DITbTOCX/SQ==
   dependencies:
     browserslist "^4.16.6"
     semver "7.0.0"
 
 core-js@^3.12.1:
-  version "3.15.0"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.15.0.tgz#db9554ebce0b6fd90dc9b1f2465c841d2d055044"
-  integrity sha512-GUbtPllXMYRzIgHNZ4dTYTcUemls2cni83Q4Q/TrFONHfhcg9oEGOtaGHfb0cpzec60P96UKPvMkjX1jET8rUw==
+  version "3.15.2"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.15.2.tgz#740660d2ff55ef34ce664d7e2455119c5bdd3d61"
+  integrity sha512-tKs41J7NJVuaya8DxIOCnl8QuPHx5/ZVbFo1oKgVl1qHFBBrDctzQGtuLjPpRdNTWmKPH6oEvgN/MUID+l485Q==
 
 core-util-is@~1.0.0:
   version "1.0.2"
@@ -2513,9 +2513,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.723:
-  version "1.3.754"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.754.tgz#afbe69177ad7aae968c3bbeba129dc70dcc37cf4"
-  integrity sha512-Q50dJbfYYRtwK3G9mFP/EsJVzlgcYwKxFjbXmvVa1lDAbdviPcT9QOpFoufDApub4j0hBfDRL6v3lWNLEdEDXQ==
+  version "1.3.763"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.763.tgz#93f6f02506d099941f557b9db9ba50b30215bf15"
+  integrity sha512-UyvEPae0wvzsyNJhVfGeFSOlUkHEze8xSIiExO5tZQ8QTr7obFiJWGk3U4e7afFOJMQJDszqU/3Pk5jtKiaSEg==
 
 elliptic@^6.5.3:
   version "6.5.4"
@@ -4442,9 +4442,9 @@ opn@^5.5.0:
     is-wsl "^1.1.0"
 
 optimize-css-assets-webpack-plugin@^5.0.6:
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/optimize-css-assets-webpack-plugin/-/optimize-css-assets-webpack-plugin-5.0.6.tgz#abad0c6c11a632201794f75ddba3ce13e32ae80e"
-  integrity sha512-JAYw7WrIAIuHWoKeSBB3lJ6ZG9PSDK3JJduv/FMpIY060wvbA8Lqn/TCtxNGICNlg0X5AGshLzIhpYrkltdq+A==
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/optimize-css-assets-webpack-plugin/-/optimize-css-assets-webpack-plugin-5.0.8.tgz#cbccdcf5a6ef61d4f8cc78cf083a67446e5f402a"
+  integrity sha512-mgFS1JdOtEGzD8l+EuISqL57cKO+We9GcoiQEmdCWRqqck+FGNmYJtx9qfAPzEz+lRrlThWMuGDaRkI/yWNx/Q==
   dependencies:
     cssnano "^4.1.10"
     last-call-webpack-plugin "^3.0.0"
@@ -6333,9 +6333,9 @@ terser@^4.1.2:
     source-map-support "~0.5.12"
 
 terser@^5.3.4:
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/terser/-/terser-5.7.0.tgz#a761eeec206bc87b605ab13029876ead938ae693"
-  integrity sha512-HP5/9hp2UaZt5fYkuhNBR8YyRcT8juw8+uFbAme53iN9hblvKnLUTKkmwJG6ocWpIKf8UK4DoeWG4ty0J6S6/g==
+  version "5.7.1"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-5.7.1.tgz#2dc7a61009b66bb638305cb2a824763b116bf784"
+  integrity sha512-b3e+d5JbHAe/JSjwsC3Zn55wsBIM7AsHLjKxT31kGCldgbpFePaFo+PiddtO6uwRZWRw7sPXmAN8dTW61xmnSg==
   dependencies:
     commander "^2.20.0"
     source-map "~0.7.2"
