@@ -8,14 +8,16 @@
   <%= @question.body %>
 </p>
 
-<%= link_to 'Show', question_path(@question), class: 'btn btn-primary' %> 
-<%= link_to 'Edit', edit_question_path(@question), class: 'btn btn-secondary' %>
-<%= link_to 'Destroy', question_path(@question), class: 'btn btn-danger',
-  data: {method: :delete, confirm: 'Are you sure?'} %>
+<div class="btn-group">
+  <%= link_to 'Show', question_path(@question), class: 'btn btn-primary' %> 
+  <%= link_to 'Edit', edit_question_path(@question), class: 'btn btn-secondary' %>
+  <%= link_to 'Destroy', question_path(@question), class: 'btn btn-danger',
+    data: {method: :delete, confirm: 'Are you sure?'} %>
+</div>
 
 <hr class="my-3">
 
-<h2>Write your answer</h2>
+<h2 class="mb-3">Write your answer</h2>
 
 <%= render 'shared/errors', object: @answer %>
 
@@ -36,16 +38,20 @@
 <h2 class="mt-5">Answers</h2>
 
 <% @answers.each do |answer| %>
-  <article class="mb-3">
-    <time datetime="<%= answer.formatted_created_at %>">
-      <%= answer.formatted_created_at %>
-    </time>
+  <article class="mb-3 card">
+    <div class="card-body">
+      <section class="card-text">
+        <small><time datetime="<%= answer.formatted_created_at %>">
+          <%= answer.formatted_created_at %>
+        </time></small>
 
-    <p>
-      <%= answer.body %>
-    </p>
+        <p class="mt-2 mb-3">
+          <%= answer.body %>
+        </p>
+      </section>
 
-    <%= link_to 'Delete', question_answer_path(@question, answer), class: 'btn btn-danger btn-xs',
-      data: {method: :delete, confirm: "Are you sure?"} %>
+      <%= link_to 'Delete', question_answer_path(@question, answer), class: 'btn btn-danger btn-sm',
+        data: {method: :delete, confirm: "Are you sure?"} %>
+    </div>
   </article>
 <% end %>
