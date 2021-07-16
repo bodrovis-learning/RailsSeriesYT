@@ -1,4 +1,4 @@
-<article class="mb-3 card" id="answer-<%= answer.id %>">
+<%= tag.article class: 'mb-3 card', id: dom_id(answer) do %>
   <div class="card-body">
     <section class="card-text">
       <small><time datetime="<%= answer.formatted_created_at %>">
@@ -15,4 +15,4 @@
     <%= link_to 'Delete', question_answer_path(question, answer), class: 'btn btn-danger btn-sm',
       data: {method: :delete, confirm: "Are you sure?"} %>
   </div>
-</article>
+<% end %>
