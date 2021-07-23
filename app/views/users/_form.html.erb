@@ -41,5 +41,18 @@
     </div>
   </div>
 
-  <%= f.submit "Register!", class: 'btn btn-primary btn-lg' %>
+  <% unless @user.new_record? %>
+    <div class="mb-3 row">
+      <div class="col-sm-2 col-form-label">
+        <%= f.label :old_password %>
+      </div>
+
+      <div class="col-sm-10">
+        <%= f.password_field :old_password, class: 'form-control form-control-lg' %>
+      </div>
+    </div>
+  <% end %>
+
+  <%= f.submit (@user.new_record? ? "Register!" : "Save"),
+    class: 'btn btn-primary btn-lg' %>
 <% end %>

@@ -11,13 +11,30 @@
 
         <ul class="nav col-12 col-lg-auto mb-2 mb-md-0">
           <% if user_signed_in? %>
-            <li>
-              <a class="nav-link px-2 text-white" href="#">
-                <%= current_user.name %>
-              </a>
+            <li class="dropdown">
+              <%= nav_tab current_user.name_or_email, '#',
+                class: 'nav-link px-2 dropdown-toggle',
+                data: {"bs-toggle": 'dropdown'}, current_page: current_page %>
+              
+              <ul class="dropdown-menu">
+                <li>
+                  <%= link_to 'Edit profile', edit_user_path(current_user),
+                    class: 'dropdown-item' %>
+                </li>
+
+                <li><hr class="dropdown-divider"></li>
+
+                <li>
+                  <%= link_to 'Log Out', session_path,
+                    class: 'dropdown-item', data: {method: :delete} %>
+                </li>
+              </ul>
             </li>
           <% else %>
             <li><%= nav_tab 'Sign Up', new_user_path,
+              class: 'nav-link px-2', current_page: current_page %></li>
+
+            <li><%= nav_tab 'Log In', new_session_path,
               class: 'nav-link px-2', current_page: current_page %></li>
           <% end %>
         </ul>
