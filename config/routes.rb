@@ -9,5 +9,9 @@ Rails.application.routes.draw do
     resources :answers, except: %i[new show]
   end
 
+  namespace :admin do
+    resources :users, only: %i[index]
+  end
+
   root 'pages#index'
 end

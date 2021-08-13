@@ -1,0 +1,28 @@
+<% provide :page_title, 'Admin Users' %>
+<% currently_at 'Users' %>
+
+<h1 class="mb-4">Admin Users</h1>
+
+<div class="btn-group mb-3">
+  <%= link_to 'Download zipped XLSX', admin_users_path(format: :zip),
+    class: 'btn btn-secondary' %>
+</div>
+
+<%= pagination @pagy %>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Created at</th>
+      <th scope="col">Updated at</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @users %>
+  </tbody>
+</table>
+
+<%= pagination @pagy %>
