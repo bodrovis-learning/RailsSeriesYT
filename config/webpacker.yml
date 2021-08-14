@@ -14,7 +14,7 @@ default: &default
 
   # Reload manifest.json on all requests so we reload latest compiled packs
   cache_manifest: false
-  extract_css: true 
+
 development:
   <<: *default
   compile: true

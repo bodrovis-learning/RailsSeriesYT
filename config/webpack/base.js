@@ -3,7 +3,7 @@ const { merge } = require('webpack-merge')
 
 const customConfig = {
   resolve: {
-    extensions: [".css", ".scss"],
+    extensions: [".css"]
   },
 }
 
