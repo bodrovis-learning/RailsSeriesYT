@@ -6,14 +6,34 @@
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "5.4.0",
+    "@rails/webpacker": "^6.0.0-pre.2",
+    "autoprefixer": "^10.3.1",
     "bootstrap": "^5.0.1",
+    "css-loader": "^6.2.0",
+    "css-minimizer-webpack-plugin": "^3.0.2",
+    "mini-css-extract-plugin": "^2.2.0",
+    "postcss": "^8.3.6",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-import": "^14.0.2",
+    "postcss-loader": "^6.1.1",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.37.5",
+    "sass-loader": "^12.1.0",
     "turbolinks": "^5.2.0",
-    "webpack": "4.46.0",
-    "webpack-cli": "3.3.12"
+    "webpack": "5.50.0",
+    "webpack-cli": "4.7.2"
   },
   "version": "0.1.0",
   "devDependencies": {
+    "@webpack-cli/serve": "^1.5.1",
     "webpack-dev-server": "^3.11.2"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "babel": {
+    "presets": [
+      "./node_modules/@rails/webpacker/package/babel/preset.js"
+    ]
   }
 }
