@@ -12,7 +12,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    flash[:success] = 'Question deleted!'
+    flash[:success] = t('.success')
     redirect_to questions_path
   end
 

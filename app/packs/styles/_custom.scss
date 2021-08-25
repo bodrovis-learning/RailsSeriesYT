@@ -6,3 +6,28 @@
     color: $red;
   }
 } 
+
+.flag {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url('../images/flags.png') no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-align: left;
+}
+
+.ru-flag {
+  background-position: -1px -0px;
+
+}
+.en-flag {
+  background-position: -1px -17px;
+}
+
+.nav {
+  .flag {
+    position: relative;
+    top: 2px;
+  }
+}

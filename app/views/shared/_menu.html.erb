@@ -3,10 +3,33 @@
     <div class="container">
       <nav class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><%= nav_tab 'Home', root_path,
+          <li><%= nav_tab t('menu.home'), root_path,
             class: 'nav-link px-2', current_page: current_page %></li>
           <li><%= nav_tab 'Questions', questions_path,
             class: 'nav-link px-2', current_page: current_page %></li>
+        </ul>
+
+        <ul class="nav col-12 col-lg-auto mb-2 mb-md-0">
+          <li class="dropdown">
+            <%= link_to '#', class: 'nav-link px-2 dropdown-toggle text-white',
+              data: {"bs-toggle": 'dropdown'} do %>
+              <%= tag.div '', class: "flag #{I18n.locale}-flag mt-1" %>
+              <%= t I18n.locale %>
+            <% end %>
+            
+            <ul class="dropdown-menu">
+              <% I18n.available_locales.each do |locale| %>
+                <li>
+                  <% if I18n.locale == locale %>
+                    <%= tag.span t(locale), class: 'dropdown-item' %>
+                  <% else %>
+                    <%= link_to t(locale), root_path(locale: locale),
+                      class: 'dropdown-item' %>
+                  <% end %>
+                </li>
+              <% end %>
+            </ul>
+          </li>
         </ul>
 
         <ul class="nav col-12 col-lg-auto mb-2 mb-md-0">
