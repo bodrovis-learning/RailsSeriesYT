@@ -8,7 +8,7 @@ ruby '3.0.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 # Use sqlite3 as the database for Active Record
-
+gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 
@@ -25,14 +25,14 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'activerecord-import', '~> 1.2'
 gem 'caxlsx', '~> 3.1'
 gem 'caxlsx_rails', '~> 0.6'
+gem 'dotenv-rails', '~> 2.7'
 gem 'draper', '~> 4.0'
+gem 'lokalise_rails', '~> 2'
 gem 'pagy', '~> 4.10'
+gem 'rails-i18n', '~> 6'
 gem 'rubyXL', '~> 3.4'
 gem 'rubyzip', '~> 2'
 gem 'valid_email2', '~> 4.0'
-gem 'rails-i18n', '~> 6'
-gem 'lokalise_rails', '~> 2'
-gem 'dotenv-rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -45,11 +45,6 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'faker', '~> 2'
   gem 'pry-rails'
-  gem 'sqlite3', '~> 1.4'
-end
-
-group :production do
-gem 'pg'
 end
 
 group :development do

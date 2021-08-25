@@ -271,7 +271,7 @@ DEPENDENCIES
   byebug
   caxlsx (~> 3.1)
   caxlsx_rails (~> 0.6)
-  dotenv-rails
+  dotenv-rails (~> 2.7)
   draper (~> 4.0)
   faker (~> 2)
   lokalise_rails (~> 2)
