@@ -1,7 +1,7 @@
-<% provide :page_title, 'Edit profile' %>
-<% currently_at 'Edit profile' %>
+<% provide :page_title, t('.title') %>
+<% currently_at t('menu.edit_profile') %>
 
-<h1 class="mb-4">Edit profile</h1>
+<h1 class="mb-4"><%= t('.title') %></h1>
 
 <%= render 'form' %>
 

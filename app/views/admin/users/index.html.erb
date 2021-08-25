@@ -1,23 +1,24 @@
-<% provide :page_title, 'Admin Users' %>
-<% currently_at 'Users' %>
+<% provide :page_title, t('.title') %>
+<% currently_at t('menu.users') %>
 
-<h1 class="mb-4">Admin Users</h1>
+<h1 class="mb-4"><%= t '.title' %></h1>
 
 <div class="btn-group mb-3">
-  <%= link_to 'Download zipped XLSX', admin_users_path(format: :zip),
+  <%= link_to t('.download_zipped'), admin_users_path(format: :zip),
     class: 'btn btn-secondary' %>
 </div>
 
 <%= pagination @pagy %>
 
+<% scope = 'activerecord.attributes.user' %>
 <table class="table table-striped table-hover">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Created at</th>
-      <th scope="col">Updated at</th>
+      <th scope="col"><%= t 'name', scope: scope %></th>
+      <th scope="col"><%= t 'email', scope: scope %></th>
+      <th scope="col"><%= t 'created_at', scope: scope %></th>
+      <th scope="col"><%= t 'updated_at', scope: scope %></th>
     </tr>
   </thead>
   <tbody>
@@ -27,12 +28,12 @@
 
 <%= pagination @pagy %>
 
-<h2 class="mb-3">Upload users from XLSX</h2>
+<h2 class="mb-3"><%= t '.upload_zipped' %></h2>
 
 <%= form_with url: admin_users_path do |f| %>
   <div class="mb-3 row">
     <div class="col-sm-2 col-form-label">
-      <%= f.label :archive, 'Select archive' %>
+      <%= f.label :archive, t('.upload_form.archive') %>
     </div>
 
     <div class="col-sm-10">
@@ -40,5 +41,5 @@
     </div>
   </div>
 
-  <%= f.submit 'Upload!', class: 'btn btn-primary' %>
+  <%= f.submit t('.upload_form.submit'), class: 'btn btn-primary' %>
 <% end %>

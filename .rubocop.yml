@@ -1,10 +1,16 @@
 require:
   - rubocop-performance
   - rubocop-rails
+  - rubocop-i18n
 
 AllCops:
   NewCops: enable
   TargetRubyVersion: 2.7
+
+I18n/RailsI18n:
+  Enabled: true
+I18n/GetText:
+  Enabled: false
 
 Style/Documentation:
   Enabled: false

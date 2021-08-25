@@ -7,7 +7,7 @@
     </div>
 
     <div class="col-sm-10">
-      <%= f.email_field :email, placeholder: 'E-mail', class: 'form-control form-control-lg' %>
+      <%= f.email_field :email, class: 'form-control form-control-lg' %>
     </div>
   </div>
 
@@ -17,7 +17,7 @@
     </div>
 
     <div class="col-sm-10">
-      <%= f.text_field :name, placeholder: 'Name', class: 'form-control form-control-lg' %>
+      <%= f.text_field :name, class: 'form-control form-control-lg' %>
     </div>
   </div>
 
@@ -53,6 +53,6 @@
     </div>
   <% end %>
 
-  <%= f.submit (@user.new_record? ? "Register!" : "Save"),
-    class: 'btn btn-primary btn-lg' %>
+  <% t_key = (@user.new_record? ? "register" : "save") %>
+  <%= f.submit t(t_key, scope: 'users.global.forms'), class: 'btn btn-primary btn-lg' %>
 <% end %>

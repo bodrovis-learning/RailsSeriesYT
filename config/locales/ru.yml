@@ -5,14 +5,104 @@ ru:
     models:
       question: Вопрос
     attributes:
+      answer:
+        body: Текст
+        question: Вопрос
       question:
         title: "Заголовок"
         body: "Текст"
+      user:
+        name: Имя
+        email: Email
+        created_at: Создан
+        updated_at: Обновлён
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        old_password: Старый пароль
   pages:
     index:
       title: "Добро пожаловать в AskIt!"
   menu:
     home: "Главная"
+    users: Пользователи
+    questions: Вопросы
+    log_in: Войти
+    edit_profile: Профиль
+    log_out: Выйти
+    sign_up: Регистрация
+  admin:
+    users:
+      create:
+        success: 'Пользователи загружены!'
+      index:
+        title: Управление пользователями
+        download_zipped: 'Загрузить архив с XLSX'
+        upload_zipped: Загрузить пользователей в XLSX
+        upload_form:
+          archive: 'Выберите архив'
+          submit: 'Загрузить!'
+  users:
+    new:
+      title: Регистрация
+    edit:
+      title: Редактировать профиль
+    global:
+      forms:
+        register: Регистрация
+        save: Сохранить
+    update:
+      success: 'Ваш профиль был обновлён!'
+    create:
+      success: "Добро пожаловать, %{name}!"
+  sessions:
+    new:
+      title: Войти
+      form:
+        email: Email
+        password: Пароль
+        remember_me: Запомнить меня
+        submit: Войти!
+    create:
+      success: "С возвращением, %{name}!"
+      invalid_creds: 'Неверный email и/или пароль!'
+    destroy:
+      success: 'До новых встреч!'
   questions:
+    show:
+      write_answer: Напишите свой ответ
+      answers: Ответы
+    new:
+      title: Новый вопрос
+    index:
+      title: Вопросы
+      new: Новый вопрос
+    edit:
+      title: Редактировать вопрос
     destroy:
       success: Вопрос удалён!
+    update:
+      success: 'Вопрос обновлён!'
+    create:
+      success: 'Вопрос создан!'
+  answers:
+    edit:
+      title: Редактировать вопрос
+    update:
+      success: 'Ответ обновлён!'
+    create:
+      success: 'Ответ создан!'
+    destroy:
+      success: 'Ответ удалён!'
+  global:
+    dialog:
+      you_sure: Вы уверены?
+    button:
+      edit: Изменить
+      delete: Удалить
+      submit: Отправить
+      show: Показать
+    flash:
+      not_signed_in: 'Вы не вошли в систему!'
+      already_signed_in: 'Вы уже вошли в систему!'
+    text:
+      omission: '... (далее)'
