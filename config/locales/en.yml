@@ -2,6 +2,8 @@
 en:
   activerecord:
     attributes:
+      comment:
+        body: Comment
       answer:
         body: Body
         question: Question
@@ -78,9 +80,15 @@ en:
     show:
       answers: Answers
       write_answer: Write your answer
+      comments: Comments
     update:
       success: Question updated!
   ru: Russian
+  comments:
+    create:
+      success: Comment added!
+    destroy:
+      success: Comment deleted!
   sessions:
     create:
       invalid_creds: Incorrect email and/or password!

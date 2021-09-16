@@ -2,6 +2,8 @@
 ru:
   activerecord:
     attributes:
+      comment:
+        body: Текст
       answer:
         body: Текст
         question: Вопрос
@@ -78,9 +80,15 @@ ru:
     show:
       answers: Ответы
       write_answer: Напишите свой ответ
+      comments: Комментарии
     update:
       success: Вопрос обновлён!
   ru: Русский
+  comments:
+    create:
+      success: Комментарий добавлен!
+    destroy:
+      success: Комментарий удалён!
   sessions:
     create:
       invalid_creds: Неверный email и/или пароль!

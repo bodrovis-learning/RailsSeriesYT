@@ -8,4 +8,8 @@ class UserDecorator < ApplicationDecorator
 
     email.split('@')[0]
   end
+
+  def gravatar(size: 30, css_class: '')
+    h.image_tag "#{gravatar_url}?s=#{size}", class: "rounded #{css_class}", alt: name_or_email
+  end
 end
