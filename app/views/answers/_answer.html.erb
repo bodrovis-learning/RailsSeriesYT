@@ -1,18 +1,28 @@
-<%= tag.article class: 'mb-3 card', id: dom_id(answer) do %>
-  <div class="card-body">
-    <section class="card-text">
-      <small><time datetime="<%= answer.formatted_created_at %>">
-        <%= answer.formatted_created_at %>
-      </time></small>
+<%= tag.article class: 'mb-3 card border-0', id: dom_id(answer) do %>
+  <div class="row g-0">
+    <div class="col-sm-auto text-sm-center align-self-center">
+      <%= answer.user.gravatar size: 50, css_class: 'd-block' %>
+      <%= answer.user.name_or_email %>
+    </div>
+    <div class="col-sm">
+      <div class="card-body">
+        <section class="card-text mb-3">
+          <div class="col-sm-9">
+            <small><time datetime="<%= answer.formatted_created_at %>">
+              <%= answer.formatted_created_at %>
+            </time></small>
 
-      <div class="mt-2 mb-3">
-        <%= sanitize answer.body %>
+            <div class="mt-2">
+              <%= sanitize answer.body %>
+            </div>
+          </div>
+        </section>
+
+        <%= link_to t('global.button.edit'), edit_question_answer_path(question, answer), 
+          class: 'btn btn-info btn-sm' %>
+        <%= link_to t('global.button.delete'), question_answer_path(question, answer), class: 'btn btn-danger btn-sm',
+          data: {method: :delete, confirm: t('global.dialog.you_sure')} %>
       </div>
-    </section>
-
-    <%= link_to t('global.button.edit'), edit_question_answer_path(question, answer), 
-      class: 'btn btn-info btn-sm' %>
-    <%= link_to t('global.button.delete'), question_answer_path(question, answer), class: 'btn btn-danger btn-sm',
-      data: {method: :delete, confirm: t('global.dialog.you_sure')} %>
+    </div>
   </div>
 <% end %>

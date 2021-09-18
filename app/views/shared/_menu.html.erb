@@ -35,9 +35,12 @@
         <ul class="nav col-12 col-lg-auto mb-2 mb-md-0">
           <% if user_signed_in? %>
             <li class="dropdown">
-              <%= nav_tab current_user.name_or_email, '#',
-                class: 'nav-link px-2 dropdown-toggle',
-                data: {"bs-toggle": 'dropdown'}, current_page: current_page %>
+              <%= link_to '#',
+                class: 'nav-link px-2 dropdown-toggle text-white',
+                data: {"bs-toggle": 'dropdown'} do %>
+                <%= current_user.gravatar %>
+                <%= current_user.name_or_email %>
+              <% end %>
               
               <ul class="dropdown-menu">
                 <li>

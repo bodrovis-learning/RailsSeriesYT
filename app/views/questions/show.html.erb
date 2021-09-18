@@ -11,16 +11,21 @@
   <%= sanitize @question.body %>
 </div>
 
-<div class="btn-group">
-  <%= link_to t('global.button.show'), question_path(@question), class: 'btn btn-primary' %> 
-  <%= link_to t('global.button.edit'), edit_question_path(@question), class: 'btn btn-secondary' %>
-  <%= link_to t('global.button.delete'), question_path(@question), class: 'btn btn-danger',
-    data: {method: :delete, confirm: t('global.dialog.you_sure')} %>
+<div class="mb-3">
+  <%= @question.user.gravatar %>
+  <%= @question.user.name_or_email %>
 </div>
 
-<hr class="my-3">
+<div class="border-top border-bottom py-3">
+  <div class="btn-group">
+    <%= link_to t('global.button.show'), question_path(@question), class: 'btn btn-primary' %> 
+    <%= link_to t('global.button.edit'), edit_question_path(@question), class: 'btn btn-secondary' %>
+    <%= link_to t('global.button.delete'), question_path(@question), class: 'btn btn-danger',
+      data: {method: :delete, confirm: t('global.dialog.you_sure')} %>
+  </div>
+</div>
 
-<h2 class="mb-3"><%= t '.write_answer' %></h2>
+<h2 class="my-3"><%= t '.write_answer' %></h2>
 
 <%= render 'answers/form' %>
 

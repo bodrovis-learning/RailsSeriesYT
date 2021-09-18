@@ -1,0 +1,25 @@
+<article class="card my-3">
+  <section class="card-header">
+    <%= question.user.gravatar %>
+    <%= question.user.name_or_email %>
+  </section>
+
+  <div class="card-body">
+    <h4><%= link_to question.title, question_path(question) %></h2>
+
+    <section class="card-text">
+      <time datetime="<%= question.formatted_created_at %>">
+        <small><%= question.formatted_created_at %></small>
+      </time>
+
+      <p class="my-2">
+        <%= truncate strip_tags(question.body), length: 150, omission: t('global.text.omission') %>
+      </p>
+    </section>
+
+    <%= link_to t('global.button.show'), question_path(question), class: 'btn btn-primary' %> 
+    <%= link_to t('global.button.edit'), edit_question_path(question), class: 'btn btn-secondary' %>
+    <%= link_to t('global.button.delete'), question_path(question), class: 'btn btn-danger',
+      data: {method: :delete, confirm: t('global.dialog.you_sure')} %>
+  </div>
+</article>
