@@ -16,9 +16,11 @@
   <%= @question.user.name_or_email %>
 </div>
 
-<div class="border-top border-bottom py-3">
+<%= render 'comments/commentable', commentable: @question, comment: @comment,
+  html_id: 'questionComments' %>
+
+<div class="border-top border-bottom py-3 mt-3">
   <div class="btn-group">
-    <%= link_to t('global.button.show'), question_path(@question), class: 'btn btn-primary' %> 
     <%= link_to t('global.button.edit'), edit_question_path(@question), class: 'btn btn-secondary' %>
     <%= link_to t('global.button.delete'), question_path(@question), class: 'btn btn-danger',
       data: {method: :delete, confirm: t('global.dialog.you_sure')} %>

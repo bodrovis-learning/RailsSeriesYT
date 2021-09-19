@@ -1,4 +1,4 @@
-<%= tag.article class: 'mb-3 card border-0', id: dom_id(answer) do %>
+<%= tag.article class: 'my-3 card border-0 border-top', id: dom_id(answer) do %>
   <div class="row g-0">
     <div class="col-sm-auto text-sm-center align-self-center">
       <%= answer.user.gravatar size: 50, css_class: 'd-block' %>
@@ -26,3 +26,6 @@
     </div>
   </div>
 <% end %>
+
+<%= render 'comments/commentable', commentable: answer, comment: @comment,
+  html_id: dom_id(answer, 'comment_form') %>

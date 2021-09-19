@@ -1,0 +1,24 @@
+<%= tag.article class: 'mb-3 card border-0', id: dom_id(comment) do %>
+  <div class="row g-0">
+    <div class="col-sm-auto text-sm-center align-self-center">
+      <%= comment.user.gravatar size: 30, css_class: 'd-block' %>
+      <%= comment.user.name_or_email %>
+    </div>
+    <div class="col-sm">
+      <div class="card-body">
+        <section class="card-text mb-3">
+          <div class="col-sm-9">
+            <p>
+              <%= sanitize comment.body %>
+            </p>
+
+            <%= link_to t('global.button.delete'),
+              polymorphic_path([comment.commentable, comment]),
+              class: 'btn btn-danger btn-sm',
+              data: {method: :delete, confirm: t('global.dialog.you_sure')} %>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+<% end %>
