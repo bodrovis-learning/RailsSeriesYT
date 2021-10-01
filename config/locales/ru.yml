@@ -80,6 +80,7 @@ ru:
     index:
       new: Новый вопрос
       title: Вопросы
+      with_tag: с тегом %{tag}
     new:
       title: Новый вопрос
     show:

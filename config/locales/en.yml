@@ -80,6 +80,7 @@ en:
     index:
       new: New question
       title: Questions
+      with_tag: with tag %{tag}
     new:
       title: New question
     show:
