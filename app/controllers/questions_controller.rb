@@ -26,7 +26,7 @@ class QuestionsController < ApplicationController
   end
 
   def index
-    @pagy, @questions = pagy Question.includes(:user).order(created_at: :desc)
+    @pagy, @questions = pagy Question.all_by_tags(params[:tag_ids])
     @questions = @questions.decorate
   end
 
@@ -47,7 +47,7 @@ class QuestionsController < ApplicationController
   private
 
   def question_params
-    params.require(:question).permit(:title, :body)
+    params.require(:question).permit(:title, :body, tag_ids: [])
   end
 
   def set_question!

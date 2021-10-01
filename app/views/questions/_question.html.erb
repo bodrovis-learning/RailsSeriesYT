@@ -8,9 +8,13 @@
     <h4><%= link_to question.title, question_path(question) %></h2>
 
     <section class="card-text">
-      <time datetime="<%= question.formatted_created_at %>">
+      <%= tag.time datetime: question.formatted_created_at do %>
         <small><%= question.formatted_created_at %></small>
-      </time>
+      <% end %>
+
+      <div class="my-2">
+        <%= render question.tags %>
+      </div>
 
       <p class="my-2">
         <%= truncate strip_tags(question.body), length: 150, omission: t('global.text.omission') %>

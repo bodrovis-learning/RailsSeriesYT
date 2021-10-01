@@ -23,7 +23,7 @@
                   <% if I18n.locale == locale %>
                     <%= tag.span t(locale), class: 'dropdown-item' %>
                   <% else %>
-                    <%= link_to t(locale), root_path(locale: locale),
+                    <%= link_to t(locale), url_for(locale: locale),
                       class: 'dropdown-item' %>
                   <% end %>
                 </li>
