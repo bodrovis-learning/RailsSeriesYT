@@ -10,6 +10,8 @@ ru:
       question:
         body: Текст
         title: Заголовок
+        tags: Теги
+        tag_ids: Теги
       user:
         created_at: Создан
         email: Email

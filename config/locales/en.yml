@@ -10,6 +10,8 @@ en:
       question:
         body: Body
         title: Title
+        tags: Tags
+        tag_ids: Tags
       user:
         created_at: Created at
         email: Email
