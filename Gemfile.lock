@@ -71,6 +71,7 @@ GEM
     ast (2.4.2)
     bcrypt (3.1.16)
     bindex (0.8.1)
+    blueprinter (0.25.3)
     bootsnap (1.9.1)
       msgpack (~> 1.0)
     builder (3.2.4)
@@ -140,8 +141,6 @@ GEM
       rails-i18n
       rainbow (>= 2.2.2, < 4.0)
       terminal-table (>= 1.5.1)
-    jbuilder (2.11.2)
-      activesupport (>= 5.0.0)
     json (2.5.1)
     lokalise_rails (2.0.0)
       ruby-lokalise-api (~> 4.0)
@@ -215,7 +214,7 @@ GEM
     request_store (1.5.0)
       rack (>= 1.4)
     rexml (3.2.5)
-    rubocop (1.22.0)
+    rubocop (1.22.1)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
@@ -260,7 +259,7 @@ GEM
     thor (1.1.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
-    tzinfo-data (1.2021.2)
+    tzinfo-data (1.2021.3)
       tzinfo (>= 1.0.0)
     unicode-display_width (2.1.0)
     uniform_notifier (1.14.2)
@@ -288,6 +287,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord-import (~> 1.2)
   bcrypt (~> 3.1.7)
+  blueprinter
   bootsnap (>= 1.4.4)
   bullet
   byebug
@@ -297,7 +297,6 @@ DEPENDENCIES
   draper (~> 4.0)
   faker (~> 2)
   i18n-tasks (~> 0.9.34)
-  jbuilder
   lokalise_rails (~> 2)
   pagy (~> 4.10)
   pry-rails

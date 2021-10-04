@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_01_181435) do
+ActiveRecord::Schema.define(version: 2021_10_04_171242) do
 
   create_table "answers", force: :cascade do |t|
     t.text "body", null: false
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 2021_10_01_181435) do
     t.string "title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["title"], name: "index_tags_on_title", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -67,7 +68,9 @@ ActiveRecord::Schema.define(version: 2021_10_01_181435) do
     t.string "remember_token_digest"
     t.string "gravatar_url"
     t.string "gravatar_hash"
+    t.integer "role", default: 0, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["role"], name: "index_users_on_role"
   end
 
   add_foreign_key "answers", "questions"

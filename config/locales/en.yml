@@ -20,10 +20,17 @@ en:
         password: Password
         password_confirmation: Password confirmation
         updated_at: Updated at
+        role: Role
     models:
       question: Question
   admin:
     users:
+      edit:
+        title: Edit user
+      destroy:
+        success: User deleted!
+      update:
+        success: User updated!
       create:
         success: Users imported!
       index:
@@ -49,6 +56,11 @@ en:
       success: Answer updated!
   en: English
   global:
+    user:
+      roles:
+        basic: Basic
+        moderator: Moderator
+        admin: Admin
     button:
       delete: Delete
       edit: Edit

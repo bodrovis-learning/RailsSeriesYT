@@ -2,6 +2,11 @@
   <th scope="row"><%= user.id %></th>
   <td><%= user.name %></td>
   <td><%= user.email %></td>
+  <td><%= user.role %></td>
   <td><%= user.created_at %></td>
-  <td><%= user.updated_at %></td>
+  <td>
+    <%= link_to 'Edit', edit_admin_user_path(user), class: 'btn btn-secondary' %>
+    <%= link_to 'Delete', admin_user_path(user), class: 'btn btn-danger',
+      data: {method: :delete, confirm: t('global.dialog.you_sure')} %>
+  </td>
 </tr>

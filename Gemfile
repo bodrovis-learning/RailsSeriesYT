@@ -23,6 +23,7 @@ gem 'webpacker', '6.0.0.rc.5'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'activerecord-import', '~> 1.2'
+gem 'blueprinter'
 gem 'caxlsx', '~> 3.1'
 gem 'caxlsx_rails', '~> 0.6'
 gem 'dotenv-rails', '~> 2.7'
@@ -34,7 +35,6 @@ gem 'rails-i18n', '~> 6'
 gem 'rubyXL', '~> 3.4'
 gem 'rubyzip', '~> 2'
 gem 'valid_email2', '~> 4.0'
-gem 'jbuilder'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

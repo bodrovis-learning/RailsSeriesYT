@@ -1,0 +1,10 @@
+{
+  "ru": {
+    "remove_button": "Удалить элемент",
+    "no_results": "Ничего не нашлось"
+  },
+  "en": {
+    "remove_button": "Remove element",
+    "no_results": "No results"
+  }
+}
