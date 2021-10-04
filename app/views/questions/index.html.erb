@@ -10,7 +10,7 @@
     <div class="mb-3">
       <%= f.collection_select :tag_ids, (@tags || []), :id, :title, {selected: params[:tag_ids]},
         multiple: true, required: true,
-        class: 'js-multiple-select js-ajax-select w-100', data: {'ajax-url': '/api/tags'} %>
+        class: 'js-multiple-select', data: {'ajax-url': '/api/tags'} %>
     </div>
 
     <%= f.submit t('global.button.submit'), class: 'btn btn-primary' %>
