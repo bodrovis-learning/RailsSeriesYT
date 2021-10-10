@@ -11,7 +11,14 @@
 #   u.save
 # end
 
-30.times do
-  title = Faker::Hipster.word
-  Tag.create title: title
-end
+# 30.times do
+#   title = Faker::Hipster.word
+#   Tag.create title: title
+# end
+
+p = 'P@ssw0rd$1'
+
+User.create email: 'tester@example.com',
+            name: 'test',
+            password: p,
+            password_confirmation: p
