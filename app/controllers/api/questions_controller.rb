@@ -5,7 +5,7 @@ module Api
     def index
       @questions = Question.all
 
-      render json: QuestionBlueprint.render(@questions)
+      render json: QuestionBlueprint.render(@questions, omission: '... read more ...')
     end
   end
 end

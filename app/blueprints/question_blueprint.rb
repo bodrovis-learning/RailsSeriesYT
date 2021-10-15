@@ -3,7 +3,7 @@ class QuestionBlueprint < Blueprinter::Base
 
   identifier :id
 
-  field :body do |question, _options|
-    truncate question.body, length: 150
+  field :body do |question, options|
+    truncate question.body, length: 150, omission: options[:omission]
   end
 end
