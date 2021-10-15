@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :tags, only: :index
+    resources :questions, only: :index
   end
 
   scope '(:locale)', locale: /#{I18n.available_locales.join("|")}/ do
