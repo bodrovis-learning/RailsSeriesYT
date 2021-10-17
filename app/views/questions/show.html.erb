@@ -21,15 +21,22 @@
 
 <div class="border-top border-bottom py-3 mt-3">
   <div class="btn-group">
-    <%= link_to t('global.button.edit'), edit_question_path(@question), class: 'btn btn-secondary' %>
-    <%= link_to t('global.button.delete'), question_path(@question), class: 'btn btn-danger',
-      data: {method: :delete, confirm: t('global.dialog.you_sure')} %>
+    <% if policy(@question).update? %>
+      <%= link_to t('global.button.edit'), edit_question_path(@question), class: 'btn btn-secondary' %>
+    <% end %>
+
+    <% if policy(@question).destroy? %>
+      <%= link_to t('global.button.delete'), question_path(@question), class: 'btn btn-danger',
+        data: {method: :delete, confirm: t('global.dialog.you_sure')} %>
+    <% end %>
   </div>
 </div>
 
 <h2 class="my-3"><%= t '.write_answer' %></h2>
 
-<%= render 'answers/form' %>
+<% if policy(:answer).create? %>
+  <%= render 'answers/form' %>
+<% end %>
 
 <h2 class="mt-5 mb-3"><%= t '.answers' %></h2>
 

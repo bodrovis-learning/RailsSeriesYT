@@ -21,6 +21,14 @@ class User < ApplicationRecord
 
   before_save :set_gravatar_hash, if: :email_changed?
 
+  def author?(obj)
+    obj.user == self
+  end
+
+  def guest?
+    false
+  end
+
   def remember_me
     self.remember_token = SecureRandom.urlsafe_base64
     # rubocop:disable Rails/SkipsModelValidations

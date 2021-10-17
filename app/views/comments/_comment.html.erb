@@ -12,10 +12,12 @@
               <%= sanitize comment.body %>
             </p>
 
-            <%= link_to t('global.button.delete'),
-              polymorphic_path([comment.commentable, comment]),
-              class: 'btn btn-danger btn-sm',
-              data: {method: :delete, confirm: t('global.dialog.you_sure')} %>
+            <% if policy(comment).destroy? %>
+              <%= link_to t('global.button.delete'),
+                polymorphic_path([comment.commentable, comment]),
+                class: 'btn btn-danger btn-sm',
+                data: {method: :delete, confirm: t('global.dialog.you_sure')} %>
+            <% end %>
           </div>
         </section>
       </div>
