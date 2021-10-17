@@ -6,6 +6,8 @@ class AnswersController < ApplicationController
 
   before_action :set_question!
   before_action :set_answer!, except: :create
+  before_action :authorize_answer!
+  after_action :verify_authorized
 
   def update
     if @answer.update answer_update_params
@@ -51,5 +53,9 @@ class AnswersController < ApplicationController
 
   def set_answer!
     @answer = @question.answers.find params[:id]
+  end
+
+  def authorize_answer!
+    authorize(@answer || Answer)
   end
 end

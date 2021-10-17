@@ -71,6 +71,7 @@ en:
     flash:
       already_signed_in: You are already signed in!
       not_signed_in: You are not signed in!
+      not_authorized: You are not authorized to perform this action!
     text:
       omission: "... (continued)"
   menu:

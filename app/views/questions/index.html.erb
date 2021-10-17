@@ -17,7 +17,9 @@
   <% end %>
 </section>
 
-<%= link_to t('.new'), new_question_path, class: 'btn btn-primary btn-lg mb-3' %>
+<% if policy(:question).new? %>
+  <%= link_to t('.new'), new_question_path, class: 'btn btn-primary btn-lg mb-3' %>
+<% end %>
 
 <%= pagination @pagy %>
 

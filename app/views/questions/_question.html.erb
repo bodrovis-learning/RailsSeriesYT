@@ -22,8 +22,14 @@
     </section>
 
     <%= link_to t('global.button.show'), question_path(question), class: 'btn btn-primary' %> 
-    <%= link_to t('global.button.edit'), edit_question_path(question), class: 'btn btn-secondary' %>
-    <%= link_to t('global.button.delete'), question_path(question), class: 'btn btn-danger',
-      data: {method: :delete, confirm: t('global.dialog.you_sure')} %>
+    
+    <% if policy(question).edit? %>
+      <%= link_to t('global.button.edit'), edit_question_path(question), class: 'btn btn-secondary' %>
+    <% end %>
+
+    <% if policy(question).destroy? %>
+      <%= link_to t('global.button.delete'), question_path(question), class: 'btn btn-danger',
+        data: {method: :delete, confirm: t('global.dialog.you_sure')} %>
+    <% end %>
   </div>
 </article>
