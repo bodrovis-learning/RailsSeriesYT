@@ -6,7 +6,7 @@
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
-    "@rails/webpacker": "6.0.0-rc.5",
+    "@rails/webpacker": "6.0.0-rc.6",
     "autoprefixer": "^10.3.1",
     "bootstrap": "^5.1.0",
     "css-loader": "^6.2.0",
@@ -20,8 +20,8 @@
     "sass-loader": "^12.1.0",
     "tom-select": "^2.0.0-rc.4",
     "turbolinks": "^5.2.0",
-    "webpack": "5.58.2",
-    "webpack-cli": "4.9.0"
+    "webpack": "5.62.1",
+    "webpack-cli": "4.9.1"
   },
   "version": "0.1.0",
   "devDependencies": {

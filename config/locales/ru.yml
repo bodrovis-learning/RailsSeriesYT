@@ -55,6 +55,22 @@ ru:
     update:
       success: Ответ обновлён!
   en: Английский
+  password_resets:
+    fail: Не удалось сбросить ваш пароль...
+    edit:
+      title: Выберите новый пароль
+      form:
+        submit: Сбросить пароль!
+    update:
+      success: Ваш пароль был сброшен!
+    create:
+      success: Инструкции были отправлены на ваш адрес.
+    new:
+      title: Сбросить пароль
+      form:
+        email: Email
+        submit: Отправить инструкции для сброса пароля
+        back: Назад ко входу в систему
   global:
     user:
       roles:
@@ -105,6 +121,9 @@ ru:
     update:
       success: Вопрос обновлён!
   ru: Русский
+  password_reset_mailer:
+    reset_email:
+      subject: 'Сброс пароля | AskIt'
   sessions:
     create:
       invalid_creds: Неверный email и/или пароль!
@@ -117,6 +136,7 @@ ru:
         password: Пароль
         remember_me: Запомнить меня
         submit: Войти!
+        forgot_password: Я забыл пароль
       title: Войти
   users:
     create:

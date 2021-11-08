@@ -34,4 +34,6 @@
   </div>
 
   <%= f.submit t('.form.submit'), class: 'btn btn-primary btn-lg' %>
+  <%= link_to t('.form.forgot_password'), new_password_reset_path,
+    class: 'btn btn-secondary' %>
 <% end %>

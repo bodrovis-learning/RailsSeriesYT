@@ -1,0 +1,20 @@
+<% provide :page_title, t('.title') %>
+<% currently_at t('menu.log_in') %>
+
+<h1 class="mb-4"><%= t('.title') %></h1>
+
+<%= form_with url: password_reset_path do |f| %>
+  <div class="mb-3 row">
+    <div class="col-sm-2 col-form-label">
+      <%= f.label :email, t('.form.email') %>
+    </div>
+
+    <div class="col-sm-10">
+      <%= f.email_field :email, value: params[:email],
+        class: 'form-control form-control-lg', required: true %>
+    </div>
+  </div>
+
+  <%= f.submit t('.form.submit'), class: 'btn btn-primary btn-lg' %>
+  <%= link_to t('.form.back'), new_session_path, class: 'btn btn-secondary' %>
+<% end %>
