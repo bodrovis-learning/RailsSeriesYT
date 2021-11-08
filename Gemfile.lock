@@ -129,9 +129,9 @@ GEM
       activesupport (>= 5.0)
     highline (2.0.3)
     htmlentities (4.3.4)
-    i18n (1.8.10)
+    i18n (1.8.11)
       concurrent-ruby (~> 1.0)
-    i18n-tasks (0.9.34)
+    i18n-tasks (0.9.35)
       activesupport (>= 4.0.2)
       ast (>= 2.1.0)
       erubi
@@ -141,8 +141,12 @@ GEM
       rails-i18n
       rainbow (>= 2.2.2, < 4.0)
       terminal-table (>= 1.5.1)
-    json (2.6.0)
-    lokalise_manager (1.0.0)
+    json (2.6.1)
+    launchy (2.5.0)
+      addressable (~> 2.7)
+    letter_opener (1.7.0)
+      launchy (~> 2.2)
+    lokalise_manager (1.2.0)
       ruby-lokalise-api (~> 4.0)
       rubyzip (~> 2.3)
     lokalise_rails (3.0.0)
@@ -161,7 +165,7 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.12.5-x64-mingw32)
       racc (~> 1.4)
-    pagy (5.0.0)
+    pagy (5.2.2)
     parallel (1.21.0)
     parser (3.0.2.0)
       ast (~> 2.4.1)
@@ -175,7 +179,7 @@ GEM
       nio4r (~> 2.0)
     pundit (2.1.1)
       activesupport (>= 3.0.0)
-    racc (1.5.2)
+    racc (1.6.0)
     rack (2.2.3)
     rack-mini-profiler (2.3.3)
       rack (>= 1.2.0)
@@ -218,7 +222,7 @@ GEM
     request_store (1.5.0)
       rack (>= 1.4)
     rexml (3.2.5)
-    rubocop (1.22.1)
+    rubocop (1.22.3)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
@@ -227,18 +231,18 @@ GEM
       rubocop-ast (>= 1.12.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.12.0)
+    rubocop-ast (1.13.0)
       parser (>= 3.0.1.1)
     rubocop-i18n (3.0.0)
       rubocop (~> 1.0)
-    rubocop-performance (1.11.5)
+    rubocop-performance (1.12.0)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
     rubocop-rails (2.12.4)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.7.0, < 2.0)
-    ruby-lokalise-api (4.3.1)
+    ruby-lokalise-api (4.4.0)
       addressable (~> 2.5)
       faraday (~> 1.0)
       faraday_middleware (~> 1.0)
@@ -263,7 +267,7 @@ GEM
     thor (1.1.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
-    tzinfo-data (1.2021.4)
+    tzinfo-data (1.2021.5)
       tzinfo (>= 1.0.0)
     unicode-display_width (2.1.0)
     uniform_notifier (1.14.2)
@@ -275,7 +279,7 @@ GEM
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
-    webpacker (6.0.0.rc.5)
+    webpacker (6.0.0.rc.6)
       activesupport (>= 5.2)
       rack-proxy (>= 0.6.1)
       railties (>= 5.2)
@@ -283,7 +287,7 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    zeitwerk (2.4.2)
+    zeitwerk (2.5.1)
 
 PLATFORMS
   x64-mingw32
@@ -301,6 +305,7 @@ DEPENDENCIES
   draper (~> 4.0)
   faker (~> 2)
   i18n-tasks (~> 0.9.34)
+  letter_opener
   lokalise_rails (~> 3)
   pagy (~> 5.0)
   pry-rails
@@ -319,10 +324,10 @@ DEPENDENCIES
   tzinfo-data
   valid_email2 (~> 4.0)
   web-console (>= 4.1.0)
-  webpacker (= 6.0.0.rc.5)
+  webpacker (= 6.0.0.rc.6)
 
 RUBY VERSION
    ruby 3.0.2p107
 
 BUNDLED WITH
-   2.2.26
+   2.2.29
