@@ -1,26 +1,52 @@
 # frozen_string_literal: true
 
 class UserBulkService < ApplicationService
-  attr_reader :archive
+  attr_reader :archive_key, :service
 
   # rubocop:disable Lint/MissingSuper
-  def initialize(archive_param)
-    @archive = archive_param.tempfile
+  def initialize(archive_key)
+    @archive_key = archive_key
+    @service = ActiveStorage::Blob.service
   end
   # rubocop:enable Lint/MissingSuper
 
   def call
-    Zip::File.open(@archive) do |zip_file|
-      zip_file.glob('*.xlsx').each do |entry|
-        User.import users_from(entry), ignore: true
+    read_zip_entries do |entry|
+      entry.get_input_stream do |f|
+        User.import users_from(f.read), ignore: true
+        f.close
       end
     end
+  ensure
+    @service.delete @archive_key
   end
 
   private
 
-  def users_from(entry)
-    sheet = RubyXL::Parser.parse_buffer(entry.get_input_stream.read)[0]
+  def read_zip_entries
+    return unless block_given?
+
+    stream = zip_stream
+    loop do
+      entry = stream.get_next_entry
+      break unless entry
+      next unless entry.name.end_with? '.xlsx'
+
+      yield(entry)
+    end
+  ensure
+    stream.close
+  end
+
+  def zip_stream
+    f = File.open(@service.path_for(@archive_key))
+    stream = Zip::InputStream.new(f)
+    f.close
+    stream
+  end
+
+  def users_from(data)
+    sheet = RubyXL::Parser.parse_buffer(data)[0]
     sheet.map do |row|
       cells = row.cells[0..2].map { |c| c&.value.to_s }
       User.new name: cells[0],

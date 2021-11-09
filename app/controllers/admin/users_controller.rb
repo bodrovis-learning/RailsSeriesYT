@@ -18,8 +18,9 @@ module Admin
     end
 
     def create
+      # rails active_storage:install
       if params[:archive].present?
-        UserBulkService.call params[:archive]
+        UserBulkImportJob.perform_later create_blob.key, current_user
         flash[:success] = t '.success'
       end
 
@@ -44,6 +45,11 @@ module Admin
     end
 
     private
+
+    def create_blob
+      file = File.open(params[:archive])
+      ActiveStorage::Blob.create_and_upload!(io: file, filename: params[:archive].original_filename)
+    end
 
     def respond_with_zipped_users
       compressed_filestream = Zip::OutputStream.write_buffer do |zos|

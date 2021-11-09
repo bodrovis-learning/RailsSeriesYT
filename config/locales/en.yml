@@ -24,6 +24,9 @@ en:
     models:
       question: Question
   admin:
+    user_mailer:
+      bulk_import_done:
+        subject: Task done
     users:
       edit:
         title: Edit user
