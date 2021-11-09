@@ -18,7 +18,7 @@ class UserBulkService < ApplicationService
       end
     end
   ensure
-    @service.delete @archive_key
+    service.delete archive_key
   end
 
   private
@@ -39,7 +39,7 @@ class UserBulkService < ApplicationService
   end
 
   def zip_stream
-    f = File.open(@service.path_for(@archive_key))
+    f = File.open(service.path_for(archive_key))
     stream = Zip::InputStream.new(f)
     f.close
     stream

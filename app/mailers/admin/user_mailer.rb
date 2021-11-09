@@ -14,5 +14,13 @@ module Admin
 
       mail to: @user.email, subject: I18n.t('admin.user_mailer.bulk_import_fail.subject')
     end
+
+    def bulk_export_done
+      @user = params[:user]
+      zipped_blob = params[:zipped_blob]
+
+      attachments[zipped_blob.attachable_filename] = zipped_blob.download
+      mail to: @user.email, subject: 'done export'
+    end
   end
 end
