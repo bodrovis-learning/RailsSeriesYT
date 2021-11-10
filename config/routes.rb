@@ -34,7 +34,7 @@ Rails.application.routes.draw do
 
     resources :answers, except: %i[new show], concerns: :commentable
 
-    namespace :admin do
+    namespace :admin, constraints: AdminConstraint.new do
       resources :users, only: %i[index create edit update destroy]
     end
 
