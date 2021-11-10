@@ -5,8 +5,7 @@ class UserBulkExportService < ApplicationService
     compressed_filestream = output_stream
 
     compressed_filestream.rewind
-    ActiveStorage::Blob.create_and_upload! io: compressed_filestream,
-                                           filename: 'users.zip'
+    compressed_filestream
   end
 
   private

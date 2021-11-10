@@ -17,9 +17,9 @@ module Admin
 
     def bulk_export_done
       @user = params[:user]
-      zipped_blob = params[:zipped_blob]
+      stream = params[:stream]
 
-      attachments[zipped_blob.attachable_filename] = zipped_blob.download
+      attachments['result.zip'] = stream.read
       mail to: @user.email, subject: I18n.t('admin.user_mailer.bulk_export_done.subject')
     end
   end
