@@ -5,7 +5,7 @@
 
 <div class="btn-group mb-3">
   <%= link_to t('.download_zipped'), admin_users_path(format: :zip),
-    class: 'btn btn-secondary' %>
+    class: 'btn btn-secondary', data: {confirm: t('global.dialog.you_sure')} %>
 </div>
 
 <%= pagination @pagy %>

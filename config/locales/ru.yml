@@ -24,6 +24,13 @@ ru:
     models:
       question: Вопрос
   admin:
+    user_mailer:
+      bulk_import_done:
+        subject: Импорт пользователей завершён | AskIt
+      bulk_import_fail:
+        subject: Импорт пользователей не удался | AskIt
+      bulk_export_done:
+        subject: Экспорт пользователей завершён | AskIt
     users:
       edit:
         title: Редактирование пользователя
@@ -32,8 +39,9 @@ ru:
       update:
         success: Пользователь обновлён!
       create:
-        success: Пользователи загружены!
+        success: Вы получите письмо, когда операция завершится
       index:
+        success: Вы получите письмо, когда операция завершится
         download_zipped: Загрузить архив с XLSX
         title: Управление пользователями
         upload_form:
