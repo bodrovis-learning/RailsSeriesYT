@@ -80,6 +80,8 @@ ru:
         submit: Отправить инструкции для сброса пароля
         back: Назад ко входу в систему
   global:
+    errors:
+      invalid_format: имеет неверный формат
     user:
       roles:
         basic: Базовый
