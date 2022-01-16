@@ -24,6 +24,6 @@
 // Utilities
 @import "bootstrap/scss/utilities/api";
 
-@import '../styles/custom.scss';
+@import 'custom.scss';
 
-@import 'tom-select/dist/css/tom-select.bootstrap5';
+@import 'tom-select/src/scss/tom-select.bootstrap5';

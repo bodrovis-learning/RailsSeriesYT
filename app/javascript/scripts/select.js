@@ -13,6 +13,7 @@ document.addEventListener("turbolinks:load", function() {
   const i18n = Translations[document.querySelector('body').dataset.lang]
 
   document.querySelectorAll('.js-multiple-select').forEach((element) => {
+    console.log(element)
     let opts = {
       plugins: {
         'remove_button': {
