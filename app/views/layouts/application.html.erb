@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "application", media: 'all' %>
+    <%= stylesheet_link_tag "application", 'data-turbo-track': 'reload', media: 'all' %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
@@ -14,9 +14,9 @@
     <%= yield :main_menu %>
     
     <main class="container mt-3">
-      <% flash.each do |k, v| %>
-        <%= tag.div v, class: "alert alert-#{k}", role: 'alert' %>
-      <% end %>
+      <div class="flash" id="flash">
+        <%= render "layouts/flash" %>
+      </div>
 
       <%= yield %>
     </main>

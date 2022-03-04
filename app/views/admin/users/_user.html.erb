@@ -7,6 +7,6 @@
   <td>
     <%= link_to 'Edit', edit_admin_user_path(user), class: 'btn btn-secondary' %>
     <%= link_to 'Delete', admin_user_path(user), class: 'btn btn-danger',
-      data: {method: :delete, confirm: t('global.dialog.you_sure')} %>
+      data: {turbo_method: :delete, turbo_confirm: t('global.dialog.you_sure')} %>
   </td>
 </tr>
