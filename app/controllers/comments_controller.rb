@@ -25,7 +25,7 @@ class CommentsController < ApplicationController
 
     comment.destroy
     flash[:success] = t '.success'
-    redirect_to question_path(@question)
+    redirect_to question_path(@question), status: :see_other
   end
 
   private

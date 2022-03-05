@@ -3,23 +3,24 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.3'
+ruby '3.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '7.0.1'
+gem 'rails', '7.0.2.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 
-gem 'sprockets-rails', '~> 3.4'
-gem 'jsbundling-rails', '~> 1.0'
 gem 'cssbundling-rails', '~> 1.0'
+gem 'jsbundling-rails', '~> 1.0'
+gem 'propshaft', '~> 0.6'
+gem 'turbo-rails', '~> 1.0'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
@@ -30,7 +31,7 @@ gem 'caxlsx_rails', '~> 0.6'
 gem 'dotenv-rails', '~> 2.7'
 gem 'draper', '~> 4.0'
 gem 'i18n-tasks', '~> 0.9.34'
-gem 'lokalise_rails', '~> 3'
+gem 'lokalise_rails', '~> 4'
 gem 'pagy', '~> 5.0'
 gem 'pundit', '~> 2.1'
 gem 'rails-i18n', '~> 7'
@@ -58,7 +59,7 @@ group :development do
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   # gem 'bullet'
   gem 'letter_opener'
-  gem 'rack-mini-profiler', '~> 2.0'
+  gem 'rack-mini-profiler', '~> 3'
   gem 'rubocop', '~> 1.18', require: false
   gem 'rubocop-i18n', '~> 3', require: false
   gem 'rubocop-performance', '~> 1.11', require: false
@@ -66,4 +67,4 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'tzinfo-data' # , platforms: %i[mingw mswin x64_mingw jruby]

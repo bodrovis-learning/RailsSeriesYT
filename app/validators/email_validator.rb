@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class EmailValidator < ActiveModel::EachValidator
   def validate_each(rec, att, val)
     msg = I18n.t 'global.errors.invalid_format'

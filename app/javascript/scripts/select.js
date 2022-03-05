@@ -3,13 +3,13 @@ import Translations from './i18n/select.json'
 
 let selects = []
 
-document.addEventListener("turbolinks:before-cache", function() {
+document.addEventListener("turbo:before-cache", function() {
   selects.forEach((select) => {
     select.destroy()
   })
 })
 
-document.addEventListener("turbolinks:load", function() {
+const rerender = function() {
   const i18n = Translations[document.querySelector('body').dataset.lang]
 
   document.querySelectorAll('.js-multiple-select').forEach((element) => {
@@ -46,4 +46,7 @@ document.addEventListener("turbolinks:load", function() {
     const el = new TomSelect(element, opts)
     selects.push(el)
   })
-})
+}
+
+document.addEventListener("turbo:load", rerender)
+document.addEventListener("turbo:render", rerender)
