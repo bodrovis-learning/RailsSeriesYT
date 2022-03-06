@@ -90,14 +90,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rails/actioncable@npm:^7.0, @rails/actioncable@npm:^7.0.2-2":
+"@rails/actioncable@npm:^7.0, @rails/actioncable@npm:^7.0.2":
   version: 7.0.2
   resolution: "@rails/actioncable@npm:7.0.2"
   checksum: 0064aa1b43c4099c62b0ec57534f756b22283a751571449e9b2285cef6593cefdd8f3edd692dc7840047ceba8f39e269f5a3e4a083f761ff87f686a6c366c7e8
   languageName: node
   linkType: hard
 
-"@rails/activestorage@npm:^7.0.2-2":
+"@rails/activestorage@npm:^7.0.2":
   version: 7.0.2
   resolution: "@rails/activestorage@npm:7.0.2"
   dependencies:
@@ -206,8 +206,8 @@ __metadata:
   dependencies:
     "@hotwired/turbo-rails": ^7.1.1
     "@popperjs/core": ^2.11.2
-    "@rails/actioncable": ^7.0.2-2
-    "@rails/activestorage": ^7.0.2-2
+    "@rails/actioncable": ^7.0.2
+    "@rails/activestorage": ^7.0.2
     autoprefixer: ^10.4.2
     bootstrap: ^5.1.3
     esbuild: ^0.14.25

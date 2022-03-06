@@ -14,7 +14,7 @@ class QuestionsController < ApplicationController
   def destroy
     @question.destroy
     respond_to do |format|
-      format.html do 
+      format.html do
         flash[:success] = t('.success')
         redirect_to questions_path, status: :see_other
       end
@@ -57,7 +57,7 @@ class QuestionsController < ApplicationController
     @question = current_user.questions.build question_params
     if @question.save
       respond_to do |format|
-        format.html do 
+        format.html do
           flash[:success] = t('.success')
           redirect_to questions_path
         end
