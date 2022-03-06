@@ -1,35 +1,36 @@
-<article class="card my-3">
-  <section class="card-header">
-    <%= question.user.gravatar %>
-    <%= question.user.name_or_email %>
-  </section>
-
-  <div class="card-body">
-    <h4><%= link_to question.title, question_path(question) %></h2>
-
-    <section class="card-text">
-      <%= tag.time datetime: question.formatted_created_at do %>
-        <small><%= question.formatted_created_at %></small>
-      <% end %>
-
-      <div class="my-2">
-        <%= render question.tags %>
-      </div>
-
-      <p class="my-2">
-        <%= truncate strip_tags(question.body), length: 150, omission: t('global.text.omission') %>
-      </p>
+<%= turbo_frame_tag question do %>
+  <article class="card my-3">
+    <section class="card-header">
+      <%= question.user.gravatar %>
+      <%= question.user.name_or_email %>
     </section>
 
-    <%= link_to t('global.button.show'), question_path(question), class: 'btn btn-primary' %> 
-    
-    <% if policy(question).edit? %>
-      <%= link_to t('global.button.edit'), edit_question_path(question), class: 'btn btn-secondary' %>
-    <% end %>
+    <div class="card-body">
+      <h4><%= link_to question.title, question_path(question),
+        data: {turbo_frame: '_top'} %></h2>
 
-    <% if policy(question).destroy? %>
-      <%= link_to t('global.button.delete'), question_path(question), class: 'btn btn-danger',
-        data: {turbo_method: :delete, turbo_confirm: t('global.dialog.you_sure')} %>
-    <% end %>
-  </div>
-</article>
+      <section class="card-text">
+        <%= tag.time datetime: question.formatted_created_at do %>
+          <small><%= question.formatted_created_at %></small>
+        <% end %>
+
+        <div class="my-2">
+          <%= render question.tags %>
+        </div>
+
+        <p class="my-2">
+          <%= sanitize question.body %>
+        </p>
+      </section>
+
+      <% if policy(question).edit? %>
+        <%= link_to t('global.button.edit'), edit_question_path(question), class: 'btn btn-secondary' %>
+      <% end %>
+
+      <% if policy(question).destroy? %>
+        <%= link_to t('global.button.delete'), question_path(question), class: 'btn btn-danger',
+          data: {turbo_method: :delete, turbo_confirm: t('global.dialog.you_sure')} %>
+      <% end %>
+    </div>
+  </article>
+<% end %>

@@ -3,6 +3,10 @@
 module ApplicationHelper
   include Pagy::Frontend
 
+  def prepend_flash
+    turbo_stream.prepend 'flash', partial: 'shared/flash'
+  end
+
   def pagination(obj)
     # rubocop:disable Rails/OutputSafety
     raw(pagy_bootstrap_nav(obj)) if obj.pages > 1

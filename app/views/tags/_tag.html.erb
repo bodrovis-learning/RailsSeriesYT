@@ -1,4 +1,5 @@
 <%= link_to questions_path(tag_ids: tag),
-  class: 'badge rounded-pill bg-light text-dark d-inline-block px-2 pt-1 pb-2 me-1' do %>
+  class: 'badge rounded-pill bg-light text-dark d-inline-block px-2 pt-1 pb-2 me-1',
+  data: {turbo_frame: '_top'} do %>
   <small><%= tag.title %></small>
 <% end %>
